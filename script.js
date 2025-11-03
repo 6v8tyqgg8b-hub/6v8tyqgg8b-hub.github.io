@@ -1,1 +1,1 @@
-console.log('live chart soon');
+console.log('Hype Degen Loaded');

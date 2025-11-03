@@ -1,0 +1,41 @@
+
+body {
+  margin:0;
+  background:black;
+  font-family: Arial, sans-serif;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+.logo {
+  color:#ffd700;
+  padding:20px;
+  font-size:26px;
+}
+.hero { padding:120px 20px; }
+.tag { color:#ffd700; font-weight:bold; }
+.btn {
+  padding:10px 22px;
+  margin:8px;
+  background:#ffd700;
+  color:black;
+  border-radius:6px;
+}
+.btn.outline {
+  background:transparent;
+  border:2px solid #ffd700;
+  color:#ffd700;
+}
+.contract {opacity:0.6;margin-top:10px;font-size:0.8em;}
+.glow {
+  position:fixed; top:-200px; left:-200px;
+  width:600px; height:600px;
+  background:#00ff99; opacity:0.2;
+  filter:blur(140px);
+  pointer-events:none;
+  animation:float 6s infinite alternate;
+}
+@keyframes float {
+  from {transform:translate(0,0)}
+  to {transform:translate(40px,40px)}
+}

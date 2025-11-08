@@ -8,12 +8,14 @@
   "website": "https://richmillicoin.com",
   "twitter": "https://x.com/richmillicoin",
   "telegram": "https://t.me/RichMilliCoin",
-  "instagram": "https://www.instagram.com/richmillicoin"
+  "instagram": "https://www.instagram.com/richmillicoin",
   "tags": [
     "community",
     "meme",
     "solana",
     "luxury"
   ],
-  "creator": "Milli G’s"
+  "creator": "Milli G’s",
+  "version": 2,
+  "lastUpdated": "2025-11-09T03:15:00+11:00"
 }

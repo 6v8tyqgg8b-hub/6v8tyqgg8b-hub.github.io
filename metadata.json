@@ -1,14 +1,15 @@
 {
-  "version": 2,
   "name": "Rich Milli Coin",
   "symbol": "RMC",
-  "description": "Rich Milli Coin (RMC) is a decentralised token built on Solana. Community-driven with rewards and growth utility.",
-  "image": "https://richmillicoin.com/logo.png?v=1",
-  "external_url": "https://richmillicoin.com",
-  "extensions": {
-    "website": "https://richmillicoin.com",
-    "twitter": "https://x.com/RichMilliCoin",
-    "telegram": "https://t.me/RichMilliCoin"
+  "description": "Your First Milli isn’t made with a salary, it comes from Degen Profit.",
+  "showName": "true",
+  "image": "https://ipfs.io/ipfs/bafybeidkawneqytzl2t6uc6re4jixyuiapai5wzsg4zifk5eukefyaud4m",  // ➜ update in Step 3
+  "createdOn": "https://pump.fun",
+  "website": "https://richmillicoin.com",
+  "twitter": "https://x.com/richmillicoin",
+  "telegram": "https://t.me/RichMilliCoin",
+  "instagram": "https://www.instagram.com/richmillicoin"
+}
   },
   "tags": [
     "community",

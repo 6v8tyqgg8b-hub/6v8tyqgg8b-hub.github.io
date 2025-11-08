@@ -9,6 +9,8 @@
   "twitter": "https://x.com/richmillicoin",
   "telegram": "https://t.me/RichMilliCoin",
   "instagram": "https://www.instagram.com/richmillicoin",
+  "external_url": "https://richmillicoin.com",
+  "ipfs_metadata": "https://ipfs.io/ipfs/<REPLACE_WITH_THIS_FILE_CID>",
   "tags": [
     "community",
     "meme",

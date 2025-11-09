@@ -1,23 +1,26 @@
-{
-  "name": "Rich Milli Coin",
-  "symbol": "RMC",
-  "description": "Your First Milli isn't made with a salary, it comes from Degen Profit.",
-  "showName": "true",
-  "image": "ipfs://rmc_logo.png",
-  "createdOn": "https://pump.fun",
-  "website": "https://richmillicoin.com",
-  "twitter": "https://x.com/richmillicoin",
-  "telegram": "https://t.me/RichMilliCoin",
-  "instagram": "https://www.instagram.com/richmillicoin",
-  "tags": [
-    "community",
-    "meme",
-    "solana",
-    "luxury"
-  ],
-  "creator": "Milli G's",
-  "external_url": "https://richmillicoin.com",
-  "attributes": [],
-  "version": 2,
-  "lastUpdated": "2025-11-09T06:30:00+11:00"
-}
+1  {
+2    "name": "Rich Milli Coin (V2)",
+3    "symbol": "RMC",
+4    "description": "The official relaunch of Rich Milli Coin — a Solana-based community token combining luxury, innovation, and decentralisation. Verified metadata control and scalability for the next phase of RMC.",
+5    "showName": "true",
+6    "image": "https://richmillicoin.com/rmc_logo.png",
+7    "createdOn": "https://solana.com",
+8    "website": "https://richmillicoin.com",
+9    "twitter": "https://x.com/richmillicoin",
+10   "telegram": "https://t.me/RichMilliCoin",
+11   "instagram": "https://www.instagram.com/richmillicoin",
+12   "tags": [
+13     "community",
+14     "meme",
+15     "solana",
+16     "luxury"
+17   ],
+18   "creator": "Milli G's",
+19   "external_url": "https://richmillicoin.com",
+20   "attributes": [
+21     { "trait_type": "Network", "value": "Solana" },
+22     { "trait_type": "Edition", "value": "V2" }
+23   ],
+24   "version": 2,
+25   "lastUpdated": "2025-11-09T06:30:00+11:00"
+26  }

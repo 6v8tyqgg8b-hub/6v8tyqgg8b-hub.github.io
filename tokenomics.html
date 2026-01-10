@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich Milli Coin - Tokenomics</title>
+  <meta name="description" content="Rich Milli Coin (RMC) tokenomics, distribution schedule, and supply information.">
+  <meta property="og:title" content="Rich Milli Coin Tokenomics">
+  <meta property="og:description" content="10 billion fixed supply with strategic distribution for sustainable growth.">
+  <meta property="og:image" content="https://gateway.irys.xyz/wZvVJ4Q8CUb-DAV_3WVCwnPX4ZUrJKTz-WlIENhCHE8">
+  <link rel="icon" href="https://gateway.irys.xyz/wZvVJ4Q8CUb-DAV_3WVCwnPX4ZUrJKTz-WlIENhCHE8" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 2px solid #FFD700;
+      margin-bottom: 40px;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #FFD700;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #aaa;
+      font-size: 1.2em;
+    }
+    .section {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    .section h2 {
+      color: #FFD700;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .stat-box {
+      background: rgba(255, 215, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    .stat-box .value {
+      font-size: 1.8em;
+      color: #FFD700;
+      font-weight: bold;
+    }
+    .stat-box .label {
+      color: #aaa;
+      margin-top: 5px;
+    }
+    .distribution-bar {
+      background: #333;
+      border-radius: 10px;
+      height: 40px;
+      overflow: hidden;
+      margin: 20px 0;
+      display: flex;
+    }
+    .distribution-bar .community {
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      width: 16.7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #000;
+    }
+    .distribution-bar .growth {
+      background: linear-gradient(90deg, #00CED1, #00FFD1);
+      width: 83.3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #000;
+    }
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+    .legend-color.gold { background: linear-gradient(90deg, #FFD700, #FFA500); }
+    .legend-color.teal { background: linear-gradient(90deg, #00CED1, #00FFD1); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    th {
+      color: #FFD700;
+      font-weight: bold;
+    }
+    .check {
+      color: #00FF00;
+    }
+    .security-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      background: rgba(0, 255, 0, 0.1);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(0, 255, 0, 0.2);
+    }
+    .security-item.warning {
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    .security-icon {
+      font-size: 1.5em;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .links a {
+      background: rgba(255, 215, 0, 0.2);
+      color: #FFD700;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    .links a:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    .contract {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 8px;
+      font-family: monospace;
+      word-break: break-all;
+      text-align: center;
+      margin: 20px 0;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      border-top: 1px solid rgba(255, 215, 0, 0.2);
+      margin-top: 40px;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8em; }
+      .stat-box .value { font-size: 1.4em; }
+      .distribution-bar { font-size: 0.8em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://gateway.irys.xyz/wZvVJ4Q8CUb-DAV_3WVCwnPX4ZUrJKTz-WlIENhCHE8" alt="RMC Logo" class="logo">
+      <h1>Rich Milli Coin</h1>
+      <p class="subtitle">Tokenomics & Distribution</p>
+    </header>
+
+    <section class="section">
+      <h2>Token Overview</h2>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="value">RMC</div>
+          <div class="label">Symbol</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">10B</div>
+          <div class="label">Total Supply</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">9</div>
+          <div class="label">Decimals</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">Solana</div>
+          <div class="label">Blockchain</div>
+        </div>
+      </div>
+      <div class="contract">
+        <strong>Contract Address:</strong><br>
+        E4WZzxRB6hc1Pd6qZAq6QnYemfFT3iwUzdqPjzVaPJqE
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Basic Token Information</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td><strong>Token Name</strong></td>
+            <td>Rich Milli Coin</td>
+          </tr>
+          <tr>
+            <td><strong>Symbol</strong></td>
+            <td>RMC</td>
+          </tr>
+          <tr>
+            <td><strong>Blockchain</strong></td>
+            <td>Solana (SPL Token)</td>
+          </tr>
+          <tr>
+            <td><strong>Token Standard</strong></td>
+            <td>SPL Token with Metaplex Metadata</td>
+          </tr>
+          <tr>
+            <td><strong>TGE (Token Generation Event)</strong></td>
+            <td>November 16, 2025</td>
+          </tr>
+          <tr>
+            <td><strong>Emission Type</strong></td>
+            <td>Fixed Supply (No Inflation)</td>
+          </tr>
+          <tr>
+            <td><strong>Total Supply</strong></td>
+            <td>10,000,000,000 RMC</td>
+          </tr>
+          <tr>
+            <td><strong>Circulating Supply</strong></td>
+            <td>10,000,000,000 RMC (100%)</td>
+          </tr>
+          <tr>
+            <td><strong>Max Supply</strong></td>
+            <td>10,000,000,000 RMC (Capped Forever)</td>
+          </tr>
+          <tr>
+            <td><strong>Decimals</strong></td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td><strong>Mint Authority</strong></td>
+            <td>Revoked (No new tokens can be created)</td>
+          </tr>
+          <tr>
+            <td><strong>Freeze Authority</strong></td>
+            <td>Revoked (Tokens cannot be frozen)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Emission Schedule</h2>
+      <p style="margin-bottom: 20px; color: #aaa; line-height: 1.8;">
+        Rich Milli Coin uses a <strong style="color: #FFD700;">fixed supply model</strong> with no ongoing emissions. The entire 10 billion token supply was minted at TGE (Token Generation Event) and distributed according to the allocation below. There are no vesting schedules, unlock periods, or future minting events.
+      </p>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="value">100%</div>
+          <div class="label">Minted at TGE</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">0%</div>
+          <div class="label">Future Emissions</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">None</div>
+          <div class="label">Vesting Period</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">Fixed</div>
+          <div class="label">Supply Type</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Token Distribution</h2>
+      <div class="distribution-bar">
+        <div class="community">16.7%</div>
+        <div class="growth">83.3%</div>
+      </div>
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color gold"></div>
+          <span>Community Airdrop (16.7%)</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color teal"></div>
+          <span>Growth & Liquidity (83.3%)</span>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Allocation</th>
+            <th>Amount</th>
+            <th>Percentage</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Community Airdrop</td>
+            <td>1,670,872,704 RMC</td>
+            <td>16.7%</td>
+            <td>Distributed to 274 V1 holders during migration</td>
+          </tr>
+          <tr>
+            <td>Liquidity Pools</td>
+            <td>~4,000,000,000 RMC</td>
+            <td>40%</td>
+            <td>DEX liquidity (Raydium, Jupiter)</td>
+          </tr>
+          <tr>
+            <td>Future Development</td>
+            <td>~2,500,000,000 RMC</td>
+            <td>25%</td>
+            <td>Ecosystem growth, partnerships, listings</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>~1,800,000,000 RMC</td>
+            <td>18.3%</td>
+            <td>Community rewards, campaigns, incentives</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Security Features</h2>
+      <div class="security-item">
+        <span class="security-icon">✅</span>
+        <div>
+          <strong>Mint Authority Revoked</strong><br>
+          Supply is permanently fixed at 10 billion. No new tokens can ever be created.
+        </div>
+      </div>
+      <div class="security-item">
+        <span class="security-icon">✅</span>
+        <div>
+          <strong>Freeze Authority Revoked</strong><br>
+          Tokens cannot be frozen. Users have full control of their holdings.
+        </div>
+      </div>
+      <div class="security-item warning">
+        <span class="security-icon">📝</span>
+        <div>
+          <strong>Update Authority Active</strong><br>
+          Retained only for metadata updates (logo, description, links). Cannot affect token supply or transfers.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Migration History</h2>
+      <p style="margin-bottom: 20px; color: #aaa; line-height: 1.8;">
+        Rich Milli Coin successfully migrated from V1 to V2 in November 2025. The team executed a complete 1:1 token swap to protect the community after a necessary rebrand. All original holders received their tokens in the new version at no cost.
+      </p>
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="value">298</div>
+          <div class="label">Original Holders</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">274</div>
+          <div class="label">Successfully Migrated</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">91.95%</div>
+          <div class="label">Migration Rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">0.57 SOL</div>
+          <div class="label">Migration Cost</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why These Tokenomics?</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td><strong>Fixed Supply</strong></td>
+            <td>No inflation means your holdings maintain value over time</td>
+          </tr>
+          <tr>
+            <td><strong>Fair Distribution</strong></td>
+            <td>16.7% to existing community, 83.3% for growth ensures balance</td>
+          </tr>
+          <tr>
+            <td><strong>Revoked Authorities</strong></td>
+            <td>True decentralization - team cannot manipulate supply</td>
+          </tr>
+          <tr>
+            <td><strong>Liquidity Focus</strong></td>
+            <td>Large reserve for DEX liquidity ensures easy trading</td>
+          </tr>
+          <tr>
+            <td><strong>Long-term Vision</strong></td>
+            <td>Designed for sustainable growth, not pump-and-dump</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Official Links</h2>
+      <div class="links">
+        <a href="https://richmillicoin.com" target="_blank">Website</a>
+        <a href="https://x.com/RichMilliCoin" target="_blank">Twitter/X</a>
+        <a href="https://t.me/RichMilliCoin" target="_blank">Telegram</a>
+        <a href="https://discord.gg/qJbBHDcZx" target="_blank">Discord</a>
+        <a href="https://solscan.io/token/E4WZzxRB6hc1Pd6qZAq6QnYemfFT3iwUzdqPjzVaPJqE" target="_blank">Solscan</a>
+        <a href="https://raydium.io/swap/?inputMint=sol&outputMint=E4WZzxRB6hc1Pd6qZAq6QnYemfFT3iwUzdqPjzVaPJqE" target="_blank">Trade on Raydium</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Rich Milli Coin | Built on Solana</p>
+      <p style="margin-top: 10px;">
+        <a href="https://richmillicoin.com">richmillicoin.com</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

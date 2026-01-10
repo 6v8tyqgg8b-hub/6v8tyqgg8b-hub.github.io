@@ -15,9 +15,10 @@
 15     "solana",
 16     "luxury"
 17   ],
-18   "creator": "Milli G's",
-19   "external_url": "https://richmillicoin.com",
-20   "attributes": [
+18  "external_url": "https://richmillicoin.com",
+19    "whitepaper_view": "https://richmillicoin.com/assets/whitepaper/RMC_Concise_Whitepaper_2025.pdf#view=FitH",
+20 "whitepaper_download": "https://richmillicoin.com/assets/whitepaper/RMC_Concise_Whitepaper_2025.pdf",
+    "attributes": [
 21     { "trait_type": "Network", "value": "Solana" },
 22     { "trait_type": "Edition", "value": "V2" }
 23   ],
